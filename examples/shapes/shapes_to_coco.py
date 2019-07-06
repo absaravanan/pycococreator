@@ -33,23 +33,13 @@ LICENSES = [
 CATEGORIES = [
     {
         'id': 1,
-        'name': 'square',
-        'supercategory': 'shape',
-    },
-    {
-        'id': 2,
-        'name': 'circle',
-        'supercategory': 'shape',
-    },
-    {
-        'id': 3,
-        'name': 'triangle',
-        'supercategory': 'shape',
-    },
+        'name': 'mask',
+        'supercategory': 'aadhaar',
+    }
 ]
 
 def filter_for_jpeg(root, files):
-    file_types = ['*.jpeg', '*.jpg']
+    file_types = ['*.jpeg', '*.jpg', '*.png', '*.PNG']
     file_types = r'|'.join([fnmatch.translate(x) for x in file_types])
     files = [os.path.join(root, f) for f in files]
     files = [f for f in files if re.match(file_types, f)]
